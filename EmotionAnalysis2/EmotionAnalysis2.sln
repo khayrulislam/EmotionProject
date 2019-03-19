@@ -5,18 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionAnalysis", "EmotionAnalysis\EmotionAnalysis.csproj", "{8D49FE1B-FD59-444B-8DB6-F800C983BA2A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SentiStrengthDataFolder", "SentiStrengthDataFolder", "{D83D3812-3A38-4099-843B-85D30DD3A675}"
-	ProjectSection(SolutionItems) = preProject
-		EmotionAnalysis\SentiStrengthDataFolder\BoosterWordList.txt = EmotionAnalysis\SentiStrengthDataFolder\BoosterWordList.txt
-		EmotionAnalysis\SentiStrengthDataFolder\EmoticonLookupTable.txt = EmotionAnalysis\SentiStrengthDataFolder\EmoticonLookupTable.txt
-		EmotionAnalysis\SentiStrengthDataFolder\EmotionLookupTable.txt = EmotionAnalysis\SentiStrengthDataFolder\EmotionLookupTable.txt
-		EmotionAnalysis\SentiStrengthDataFolder\EnglishWordList.txt = EmotionAnalysis\SentiStrengthDataFolder\EnglishWordList.txt
-		EmotionAnalysis\SentiStrengthDataFolder\IdiomLookupTable.txt = EmotionAnalysis\SentiStrengthDataFolder\IdiomLookupTable.txt
-		EmotionAnalysis\SentiStrengthDataFolder\NegatingWordList.txt = EmotionAnalysis\SentiStrengthDataFolder\NegatingWordList.txt
-		EmotionAnalysis\SentiStrengthDataFolder\QuestionWords.txt = EmotionAnalysis\SentiStrengthDataFolder\QuestionWords.txt
-		EmotionAnalysis\SentiStrengthDataFolder\SlangLookupTable.txt = EmotionAnalysis\SentiStrengthDataFolder\SlangLookupTable.txt
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
