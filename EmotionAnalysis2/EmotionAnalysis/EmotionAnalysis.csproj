@@ -45,20 +45,28 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceFolder\BoosterWord.cs" />
+    <Compile Include="ResourceFolder\EmoticonLookup.cs" />
+    <Compile Include="ResourceFolder\EmotionLookup.cs" />
+    <Compile Include="ResourceFolder\EnglishWord.cs" />
+    <Compile Include="ResourceFolder\IdiomLookup.cs" />
+    <Compile Include="ResourceFolder\NegatingWord.cs" />
+    <Compile Include="ResourceFolder\QuestionWord.cs" />
+    <Compile Include="ResourceFolder\SlangLookup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="SentiStrengthData\BoosterWordList.txt" />
-    <Content Include="SentiStrengthData\EmoticonLookupTable.txt" />
-    <Content Include="SentiStrengthData\EmotionLookupTable.txt" />
-    <Content Include="SentiStrengthData\EnglishWordList.txt" />
-    <Content Include="SentiStrengthData\IdiomLookupTable.txt" />
-    <Content Include="SentiStrengthData\NegatingWordList.txt" />
-    <Content Include="SentiStrengthData\QuestionWords.txt" />
-    <Content Include="SentiStrengthData\SlangLookupTable.txt" />
+    <Content Include="SentiStrengthDataFolder\BoosterWordList.txt" />
+    <Content Include="SentiStrengthDataFolder\EmoticonLookupTable.txt" />
+    <Content Include="SentiStrengthDataFolder\EmotionLookupTable.txt" />
+    <Content Include="SentiStrengthDataFolder\EnglishWordList.txt" />
+    <Content Include="SentiStrengthDataFolder\IdiomLookupTable.txt" />
+    <Content Include="SentiStrengthDataFolder\NegatingWordList.txt" />
+    <Content Include="SentiStrengthDataFolder\QuestionWords.txt" />
+    <Content Include="SentiStrengthDataFolder\SlangLookupTable.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
