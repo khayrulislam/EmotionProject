@@ -10,7 +10,8 @@ namespace EmotionAnalysis.ResourceFolder
     public class ResourceInitializer
     {
 
-        private BoosterWord bosBoosterWord = new BoosterWord();
+        private BoosterWord boosterWord = new BoosterWord();
+        private EmoticonLookup emoticonLookup = new EmoticonLookup();
 
         private string SentiStrengthDataFolder = @"..\..\SentiStrengthDataFolder";
         private string BoosterWordListFile = "BoosterWordList.txt";
@@ -25,9 +26,11 @@ namespace EmotionAnalysis.ResourceFolder
         public void InitializeAllTheResources()
         {
 
-            if (bosBoosterWord.initialize(Path.Combine(SentiStrengthDataFolder,BoosterWordListFile)))
+            if (boosterWord.initialize(Path.Combine(SentiStrengthDataFolder,BoosterWordListFile)) &&
+                emoticonLookup.initialize(Path.Combine(SentiStrengthDataFolder,EmoticonLookupListFile)) 
+                )
             {
-                Console.WriteLine(bosBoosterWord.getSentiStrengthValue("definitely"));
+                Console.WriteLine(emoticonLookup.getSentiStrengthValue("38*"));
                 Console.ReadLine();
             }
         }
