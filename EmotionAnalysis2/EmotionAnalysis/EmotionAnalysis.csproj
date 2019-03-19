@@ -52,6 +52,7 @@
     <Compile Include="ResourceFolder\IdiomLookup.cs" />
     <Compile Include="ResourceFolder\NegatingWord.cs" />
     <Compile Include="ResourceFolder\QuestionWord.cs" />
+    <Compile Include="ResourceFolder\ResourceInitializer.cs" />
     <Compile Include="ResourceFolder\SlangLookup.cs" />
   </ItemGroup>
   <ItemGroup>
