@@ -10,6 +10,7 @@ namespace EmotionAnalysis
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
