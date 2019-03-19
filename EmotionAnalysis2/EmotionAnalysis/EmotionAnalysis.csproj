@@ -49,8 +49,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="SentiStrengthData\" />
+    <Content Include="SentiStrengthData\BoosterWordList.txt" />
+    <Content Include="SentiStrengthData\EmoticonLookupTable.txt" />
+    <Content Include="SentiStrengthData\EmotionLookupTable.txt" />
+    <Content Include="SentiStrengthData\EnglishWordList.txt" />
+    <Content Include="SentiStrengthData\IdiomLookupTable.txt" />
+    <Content Include="SentiStrengthData\NegatingWordList.txt" />
+    <Content Include="SentiStrengthData\QuestionWords.txt" />
+    <Content Include="SentiStrengthData\SlangLookupTable.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
