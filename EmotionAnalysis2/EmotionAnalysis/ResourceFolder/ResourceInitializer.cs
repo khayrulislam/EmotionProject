@@ -13,6 +13,7 @@ namespace EmotionAnalysis.ResourceFolder
         public BoosterWord BoosterWord = new BoosterWord();
         public EmoticonLookup EmoticonLookup = new EmoticonLookup();
         public EmotionLookup EmotionLookup = new EmotionLookup();
+        public  EnglishWord EnglishWord = new EnglishWord();
 
         private string SentiStrengthDataFolder = @"..\..\SentiStrengthDataFolder";
         private string BoosterWordFile = "BoosterWordList.txt";
@@ -29,10 +30,11 @@ namespace EmotionAnalysis.ResourceFolder
 
             if (BoosterWord.Initialize(Path.Combine(SentiStrengthDataFolder,BoosterWordFile)) &&
                 EmoticonLookup.Initialize(Path.Combine(SentiStrengthDataFolder,EmoticonLookupFile)) &&
-                EmotionLookup.Initialize(Path.Combine(SentiStrengthDataFolder,EmotionLookupFile))
+                EmotionLookup.Initialize(Path.Combine(SentiStrengthDataFolder,EmotionLookupFile)) &&
+                EnglishWord.Initialize(Path.Combine(SentiStrengthDataFolder,EnglishWordFile))
                 )
             {
-                Console.WriteLine(EmotionLookup.GetSentiStrengthValue("bug"));
+                Console.WriteLine(EnglishWord.IsCorrectSpelling("abte"));
                 Console.ReadLine();
             }
         }
