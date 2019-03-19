@@ -27,7 +27,8 @@ namespace EmotionAnalysis.ResourceFolder
 
             if (bosBoosterWord.initialize(Path.Combine(SentiStrengthDataFolder,BoosterWordListFile)))
             {
-                return;
+                Console.WriteLine(bosBoosterWord.getSentiStrengthValue("definitely"));
+                Console.ReadLine();
             }
         }
 

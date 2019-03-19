@@ -6,18 +6,17 @@ namespace EmotionAnalysis.ResourceFolder
 {
     public class BoosterWord
     {
-        private Dictionary<string, int> BoosterWordDictionary = new Dictionary<string, int>(); 
+        private readonly Dictionary<string, int> BoosterWordDictionary = new Dictionary<string, int>(); 
         public bool initialize(string boosterWordFileName)
         {
             if (File.Exists(boosterWordFileName))
             {
-                string[] lineStrings = File.ReadAllLines(boosterWordFileName);
-                foreach (string line in lineStrings)
+                string[] lines = File.ReadAllLines(boosterWordFileName);
+                foreach (string line in lines)
                 {
-                    string[] words = line.Split('\t');
-                    BoosterWordDictionary[words[0]] = Int32.Parse(words[1]);
+                    string[] lineWords = line.Split('\t');
+                    BoosterWordDictionary[lineWords[0]] = Int32.Parse(lineWords[1]);
                 }
-                Console.ReadLine();
             }
             else
             {
@@ -25,7 +24,7 @@ namespace EmotionAnalysis.ResourceFolder
                 return false;
             }
 
-            return false;
+            return true;
         }
 
         public int getSentiStrengthValue(string word)
