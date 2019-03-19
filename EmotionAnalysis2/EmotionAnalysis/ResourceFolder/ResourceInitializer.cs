@@ -15,6 +15,7 @@ namespace EmotionAnalysis.ResourceFolder
         public EmotionLookup EmotionLookup = new EmotionLookup();
         public EnglishWord EnglishWord = new EnglishWord();
         public NegatingWord NegatingWord = new NegatingWord();
+        public QuestionWord QuestionWord = new QuestionWord();
 
         private string SentiStrengthDataFolder = @"..\..\SentiStrengthDataFolder";
         private string BoosterWordFile = "BoosterWordList.txt";
@@ -33,10 +34,11 @@ namespace EmotionAnalysis.ResourceFolder
                 EmoticonLookup.Initialize(Path.Combine(SentiStrengthDataFolder,EmoticonLookupFile)) &&
                 EmotionLookup.Initialize(Path.Combine(SentiStrengthDataFolder,EmotionLookupFile)) &&
                 EnglishWord.Initialize(Path.Combine(SentiStrengthDataFolder,EnglishWordFile)) &&
-                NegatingWord.Initialize(Path.Combine(SentiStrengthDataFolder,NegatingWordFile))
+                NegatingWord.Initialize(Path.Combine(SentiStrengthDataFolder,NegatingWordFile)) &&
+                QuestionWord.Initialize(Path.Combine(SentiStrengthDataFolder,QuestionWordFile))
                 )
             {
-                Console.WriteLine(NegatingWord.IsNegatingWord("can't"));
+                Console.WriteLine(QuestionWord.IsQuestionWord("what"));
                 Console.ReadLine();
             }
         }
