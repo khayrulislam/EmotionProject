@@ -6,30 +6,30 @@ namespace EmotionAnalysis.ResourceFolder
 {
     public class EmotionLookup
     {
-        private readonly Dictionary<string, int> EmotionDictionary = new Dictionary<string, int>();
-        public bool initialize(string EmotionFileName)
+        private readonly Dictionary<string, int> _emotionDictionary = new Dictionary<string, int>();
+        public bool Initialize(string emotionFileName)
         {
-            if (File.Exists(EmotionFileName))
+            if (File.Exists(emotionFileName))
             {
-                string[] lines = File.ReadAllLines(EmotionFileName);
+                string[] lines = File.ReadAllLines(emotionFileName);
                 foreach (string line in lines)
                 {
                     string[] lineWords = line.Split('\t');
-                    EmotionDictionary[lineWords[0]] = Int32.Parse(lineWords[1]);
+                    _emotionDictionary[lineWords[0]] = Int32.Parse(lineWords[1]);
                 }
             }
             else
             {
-                Console.WriteLine("{0} file doesn't exist", EmotionFileName);
+                Console.WriteLine("{0} file doesn't exist", emotionFileName);
                 return false;
             }
 
             return true;
         }
 
-        public int getSentiStrengthValue(string word)
+        public int GetSentiStrengthValue(string word)
         {
-            if (EmotionDictionary.ContainsKey(word)) return EmotionDictionary[word];
+            if (_emotionDictionary.ContainsKey(word)) return _emotionDictionary[word];
             return 0;
         }
     }

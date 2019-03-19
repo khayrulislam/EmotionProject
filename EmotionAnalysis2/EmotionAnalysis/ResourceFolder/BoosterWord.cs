@@ -6,8 +6,8 @@ namespace EmotionAnalysis.ResourceFolder
 {
     public class BoosterWord
     {
-        private readonly Dictionary<string, int> BoosterWordDictionary = new Dictionary<string, int>(); 
-        public bool initialize(string boosterWordFileName)
+        private readonly Dictionary<string, int> _boosterWordDictionary = new Dictionary<string, int>(); 
+        public bool Initialize(string boosterWordFileName)
         {
             if (File.Exists(boosterWordFileName))
             {
@@ -15,7 +15,7 @@ namespace EmotionAnalysis.ResourceFolder
                 foreach (string line in lines)
                 {
                     string[] lineWords = line.Split('\t');
-                    BoosterWordDictionary[lineWords[0]] = Int32.Parse(lineWords[1]);
+                    _boosterWordDictionary[lineWords[0]] = Int32.Parse(lineWords[1]);
                 }
             }
             else
@@ -27,9 +27,9 @@ namespace EmotionAnalysis.ResourceFolder
             return true;
         }
 
-        public int getSentiStrengthValue(string word)
+        public int GetSentiStrengthValue(string word)
         {
-            if (BoosterWordDictionary.ContainsKey(word)) return BoosterWordDictionary[word];
+            if (_boosterWordDictionary.ContainsKey(word)) return _boosterWordDictionary[word];
             return 0;
         }
 
